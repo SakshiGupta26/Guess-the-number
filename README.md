@@ -32,14 +32,8 @@ This is my first mini project, and it includes 3 difficulty modes: *Easy, **Medi
 
 ---
 
-## 📷 Screenshots
-
-> (Add a few screenshots or a GIF of your game here)
-
----
-
 ## 📁 How to Run Locally
 
 1. Clone the repository:
    ```bash
-   git clone 
+   git clone https://github.com/SakshiGupta26/Guess-the-number
