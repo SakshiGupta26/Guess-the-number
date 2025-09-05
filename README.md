@@ -36,4 +36,4 @@ This is my first mini project, and it includes 3 difficulty modes: *Easy, **Medi
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/SakshiGupta26/Guess-the-number
+   git clone (https://github.com/SakshiGupta26/Guess-the-number)
