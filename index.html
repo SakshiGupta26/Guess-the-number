@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess the Number</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game" role="application" aria-label="Guess the Number game">
+    <div class="header">
+      <h1>🎯 Guess the Number</h1>
+      <div class="controls">
+        <label class="muted" for="difficulty">Difficulty</label>
+        <select class="select" id="difficulty">
+          <option value="easy">Easy (1–20 • 30s)</option>
+          <option value="medium" selected>Medium (1–50 • 45s)</option>
+          <option value="hard">Hard (1–100 • 60s)</option>
+        </select>
+        <button id="newGame" class="btn">▶ Start</button>
+        <button id="resetScore" class="btn ghost">↺ Reset Scores</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <section class="card">
+        <div class="range" id="range">Pick a difficulty and press Start.</div>
+        <div class="row input">
+          <input type="number" id="guess" placeholder="Enter your guess…" />
+          <button id="submitGuess" class="btn secondary">Guess</button>
+          <button id="giveUp" class="btn ghost">Give up</button>
+        </div>
+        <div class="timer"><div class="bar" id="bar"></div></div>
+        <div class="feedback" id="feedback"></div>
+
+        <div class="stats">
+          <div class="stat"><div class="label">Time</div><div class="value" id="time">—</div></div>
+          <div class="stat"><div class="label">Attempts</div><div class="value" id="attempts">0</div></div>
+          <div class="stat"><div class="label">Rounds Won</div><div class="value" id="wins">0</div></div>
+          <div class="stat"><div class="label">Streak</div><div class="value" id="streak">0</div></div>
+        </div>
+      </section>
+
+      <aside class="card">
+        <h3>📊 Scoreboard</h3>
+        <div class="score">
+          <span class="pill">Score: <strong id="score">0</strong></span>
+          <span class="pill">High (Easy): <strong id="hi-easy">0</strong></span>
+          <span class="pill">High (Med): <strong id="hi-medium">0</strong></span>
+          <span class="pill">High (Hard): <strong id="hi-hard">0</strong></span>
+        </div>
+        <p class="muted">Tip: Press <kbd>Enter</kbd> to submit your guess.</p>
+      </aside>
+    </div>
+
+    <div class="toast" id="toast"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
